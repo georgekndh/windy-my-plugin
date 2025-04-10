@@ -10,19 +10,17 @@ const config: ExternalPluginConfig = {
     repository: 'https://github.com/georgekndh/windy-my-plugin',
     desktopUI: 'embedded',
     mobileUI: 'small',
-
     addToContextMenu: {
         title: 'Toggle Dust & Snow',
-        onClick: ({ lat, lon, store }) => {
+        onClick: ({ store }) => {
             const current = store.get('overlay');
             const next = current === 'dust' ? 'snowlevel' : 'dust';
             store.set('overlay', next);
-            console.log(`🌀 Toggled to ${next} from context menu at [${lat}, ${lon}]`);
-        }
+            console.log(`Switched to ${next}`);
+        },
     },
-
     onMount: ({ store }) => {
-        console.log('🌨️ Snow & Dust Plugin mounted');
+        console.log('Snow & Dust Plugin mounted');
 
         const wrapper = document.createElement('div');
         wrapper.innerHTML = `
@@ -48,12 +46,12 @@ const config: ExternalPluginConfig = {
 
         document.getElementById('btnDust')?.addEventListener('click', () => {
             store.set('overlay', 'dust');
-            console.log('🔄 Switched to Dust');
+            console.log('Switched to Dust');
         });
 
         document.getElementById('btnSnow')?.addEventListener('click', () => {
             store.set('overlay', 'snowlevel');
-            console.log('🔄 Switched to Snow Level');
+            console.log('Switched to Snow Level');
         });
     },
 };
