@@ -1,0 +1,11 @@
+{
+    "name": "Windy-Plugin",
+    "author": "You",
+    "description": "plugin for windy.",
+    "icon": "🌀",
+    "version": "0.1.0",
+    "repository": "",
+    "main": "plugin.js",
+    "html": "index.html"
+  }
+  
