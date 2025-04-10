@@ -1,9 +1,0 @@
-{
-  "name": "windy-plugin-snow-dust-toggle",
-  "version": "1.0.0",
-  "description": "Switch between Dust and Snow overlays",
-  "author": "georgekndh",
-  "main": "plugin.js",
-  "html": "index.html",
-  "icon": "❄️"
-}
